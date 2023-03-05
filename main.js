@@ -184,7 +184,7 @@ function collisionCheck(dino, cactus){
         ctx.fillStyle ='red';
         ctx.fillText(`score: ${score}`, 900, 50, 50)
 
-        alert(`Ewww! You touched the POOP!\n${score} poops total.\n\nCan you do better?\nThen press F5.`);
+        alert(`Ewww! You touched the POOP!\n${score} poops total.\n\nCan you do better?\nF5 to restart.`);
 
     }
 }
