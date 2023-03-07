@@ -159,11 +159,20 @@ eachFrameExe();
 
 // user jump key
 var jumping = false;
+
+//space
 document.addEventListener("keydown", function(key){
     if (key.code === 'Space') {
-        jumping = true;
+        jumpEnable();
     }
 })
+
+//click
+document.addEventListener("click", jumpEnable);
+
+function jumpEnable(){
+    jumping = true;
+}
 
 // collision check
 function collisionCheck(dino, cactus){
@@ -184,7 +193,7 @@ function collisionCheck(dino, cactus){
         ctx.fillStyle ='red';
         ctx.fillText(`score: ${score}`, 900, 50, 50)
 
-        alert(`Ewww! You touched the POOP!\n${score} poops total.\n\nCan you do better?\nF5 to restart.`);
+        alert(`Ewww! You touched the POOP!\n${score} poops total.\n\nCan you do better?\nThen press F5.`);
 
     }
 }
