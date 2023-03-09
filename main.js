@@ -19,7 +19,7 @@ userImg.src = 'Mason_original.jpg';
 
 // cactus obstacle image
 var cactusImg = new Image(50, 50);
-cactusImg.src = 'poop.png'; 
+cactusImg.src = 'poop_transparent.png'; 
 
 // user's info
 var dino = {
@@ -50,6 +50,7 @@ class Cactus{
     //number of cactus. Thus, the height randomly increase. Thus, addition images have to be added accordingly
     draw(){
         //ctx.fillStyle = 'white';
+        ctx.fillStyle = "rgba(255, 255, 255, 0)";
         ctx.fillRect(this.x, this.y, this.width, this.height);
         ctx.drawImage(cactusImg, this.x, 200);
         // 1 addition image added
